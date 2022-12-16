@@ -1,5 +1,9 @@
 body {
-  background-color: plum;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(244, 186, 186) 0%,
+    rgb(194, 157, 231) 90%
+  );
 }
 h1 {
   text-align: center;
@@ -15,17 +19,24 @@ img {
 button {
   display: block;
   margin: 0 auto;
-  border: 1px solid plum;
+  border: black;
   background-color: white;
   font-size: 24px;
   border-radius: 6px;
   padding: 10px 15px;
   transition: all 150ms ease-in-out;
+  font-size: 20px;
+  background: black;
+  color: white;
+  padding: 5px 8px;
+  margin-top: 20px;
 }
 button:hover {
-  background: plum;
+  background: white;
   cursor: pointer;
+  color: black;
 }
+
 footer {
   text-align: center;
   margin-top: 10px;
@@ -39,21 +50,10 @@ p {
 }
 .container {
   max-width: 1000px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 20px;
   border-radius: 10px;
   margin: 20px auto;
-}
-.theme-button {
-  font-size: 20px;
-  background-color: black;
-  color: white;
-  padding: 5px 8px;
-  margin-top: 20px;
-}
-.theme-button:hover {
-  color: black;
-  background-color: white;
 }
 
 .grid {
@@ -72,6 +72,24 @@ p {
 .grid img:hover {
   transform: scale(2);
   filter: contrast(80%);
+}
+.dark {
+  background: black;
+  color: white;
+}
+.dark .container {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.dark a {
+  color: plum;
+}
+.dark button {
+  background: plum;
+  color: white;
+}
+.dark button:hover {
+  background-color: white;
+  color: plum;
 }
 
 @media (max-width: 600px) {

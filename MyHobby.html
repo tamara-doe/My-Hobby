@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
-    <button class="theme-button">Dark theme</button>
+    <button class="theme-button">Change theme</button>
     <div class="container">
       <h1>Dancing</h1>
       <h2>My favorite hobby</h2>
@@ -32,7 +32,10 @@
         by its choreography, by its repertoire of movements, or by its
         historical period or place of origin.
       </p>
-      <button>Learn how to dance</button>
+
+      <a href="https://en.wikipedia.org/wiki/Dance" target="_blank"
+        >Read more</a
+      >
     </div>
     <footer>
       <a href="https://github.com/tamara-doe/My-Hobby" target="_blank"
@@ -40,5 +43,14 @@
       >
       by Tamara Dörflinger
     </footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        body.classList.toggle("dark");
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
   </body>
 </html>
